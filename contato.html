@@ -25,7 +25,7 @@
     </header>
     <main>
         <div class="container">
-            <form class="formulario">
+            <form class="formulario" onsubmit="validarFormulario(event)">
                 <h2>Cadastro</h2>
                 <div class="input-group">
                     <label for="nome">Nome</label>
@@ -37,8 +37,8 @@
                 </div>
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
-                    <input ta="tel" id="telefone" name="telefone" required>
-                </div>    
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
                 <button type="submit">Cadastrar</button>
             </form>
         </div>
@@ -73,6 +73,10 @@
                 alert('Por favor, insira um email válido que contenha "@"');
                 return;
             }
+
+            // Se tudo estiver correto, exibe um alerta de sucesso
+            alert('Formulário enviado com sucesso!');
+            // Aqui você pode adicionar a lógica para enviar o formulário, se necessário
         }
     </script>
 
