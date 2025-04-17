@@ -102,8 +102,14 @@ footer p {
     font-size: 30px;
     img{
         width: 30%;
-        padding-bottom: 50px;
         text-align: center;
+    }
+    p{
+        padding-bottom: 50px;
+        font-size: 30px;
+    }
+    p,h1{
+        font-family: Open Sans;
     }
 }
 
