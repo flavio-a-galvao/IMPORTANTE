@@ -25,22 +25,25 @@
     </header>
     <main>
         <div class="container">
-            <h2>Entre em Contato</h2>
-            <form name="form1" method="get"
-            action="https://professorburnes.com.br/teste-form.php">
-                <label for="nome">
-                    Digite seu Nome:
-                </label>
-                <input type="text" name="nome" id="nome">
-            <br>
-                <label for="mensagem">
-                    Digite sua Mensagem:
-                </label>
-                <textarea rows="5" name="mensagem" id="mensagem"></textarea>
-            <br>
-                <button type="submit">
-                    Enviar Mensagem
-                </button>
+            <form class="formulario">
+                <h2>Cadastro</h2>
+                <div class="input-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="input-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>    
+                <button type="submit">Cadastrar</button>
             </form>
         </div>
     </main>
