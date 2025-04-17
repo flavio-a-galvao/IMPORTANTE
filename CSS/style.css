@@ -8,42 +8,50 @@ html, body {
 }
 
 body {
-    background-color: rgb(56, 197, 0);
-    font-family: 'Open Sans', sans-serif; /* Definindo a fonte padrão */
+    background-image: url(../imagens/6271267.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+
+    
+    h1,p{
+        font-family: Open Sans;
+        color: rgb(56, 197, 0);
+    }
 }
 
-header {
+.header {
     background-color: black;
-    position: relative;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-nav {
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    font-family: Open Sans;
-    text-transform: uppercase;
-    font-size: 18px;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    transition: 0.5s all;
-}
-
-nav a:hover {
-    color: rgb(56, 197, 0);
+    .menu{
+        border: 1px solid white;
+        color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        font-size: 2em;
+        padding: 10px;
+        margin: 10px;
+        background-color: black;
+    }
+    .nav{
+        background-color: black;
+        border: 1px solid rgb(0, 0, 0);
+        margin: 0;
+        text-align: center;
+        display: none;
+        ul{
+            list-style: none;
+            li{
+                padding: 10px;
+                a{
+                    text-transform: uppercase;
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 }
 
 .btn {
@@ -104,6 +112,7 @@ footer p {
     flex-direction: column;
     align-items: center;
     font-size: 30px;
+    margin-top: 20px;
     img{
         width: 30%;
         text-align: center;
@@ -135,32 +144,62 @@ footer p {
     }
 }
 
-/* Consultas de mídia para responsividade */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Muda a direção para coluna em telas menores */
-        align-items: center; /* Centraliza os itens */
+.img3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    img{
+        width: 30%;
+        text-align: center;
     }
-
-    nav ul li {
-        margin: 10px 0; /* Ajusta a margem para itens em coluna */
+    p{
+        padding-bottom: 50px;
+        font-size: 31px;
     }
-
-    nav a {
-        font-size: 16px; /* Ajusta o tamanho da fonte em telas menores */
-    }
-
-    .btn {
-        padding: 10px 15px; /* Ajusta o padding do botão */
+    p,h1{
+        font-family: Open Sans;
     }
 }
 
-@media (max-width: 480px) {
-    nav ul {
-        font-size: 10px; /* Reduz o tamanho da fonte em telas muito pequenas */
+form{
+    color: rgb(56, 197, 0);
+    label{
+        margin: 5px 0;
     }
+    input, textarea{
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
 
-    footer {
-        font-size: 12px; /* Ajusta o tamanho da fonte do footer */
+/* Consultas de mídia para responsividade */
+@media (max-width: 768px) {
+    h1,p{
+        text-align: center;
+    }
+}
+
+@media (min-width: 1000px){
+    .header{
+        .menu{
+            display: none;
+        }
+        .nav{
+            display: block;
+            padding: 17px;
+            ul{
+                li{
+                    display: inline-block;
+                    font-size: 21px;
+                    margin: 3px;
+                    a:hover{
+                        color: rgb(56, 197, 0);
+                    }
+                }
+            }
+        }
     }
 }

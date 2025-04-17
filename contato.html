@@ -6,22 +6,43 @@
     <title>Contato</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/aos.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
 </head>
 <body id="contato">
-    <header>
-        <nav>
+    <header class="header">
+        <a href="javascript:mostrarmenu()" title="Menu" class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <nav class="nav">
             <ul>
                 <li><a href="home.html" title="HOME">HOME</a></li>
                 <li><a href="sobre.html" title="Sobre">SOBRE</a></li>
-                <li><a href="galeria.html" title="GALERIA DE FOTOS">GALERIA DE FOTOS</a></li>
                 <li><a href="contato.html" title="CONTATO" class="contato">CONTATO</a></li>
                 <li><a href="jogar.html" title="JOGAR" class="btn">JOGAR</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="formulario">
-        </section>
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form name="form1" method="get"
+            action="https://professorburnes.com.br/teste-form.php">
+                <label for="nome">
+                    Digite seu Nome:
+                </label>
+                <input type="text" name="nome" id="nome">
+            <br>
+                <label for="mensagem">
+                    Digite sua Mensagem:
+                </label>
+                <textarea rows="5" name="mensagem" id="mensagem"></textarea>
+            <br>
+                <button type="submit">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
@@ -32,5 +53,19 @@
             </li>
         </ul>
     </footer>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        function mostrarmenu() {
+            //document.querySelector('.header-nav')....
+            $(".nav").toggle();
+        }
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
