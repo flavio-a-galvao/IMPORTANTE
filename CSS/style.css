@@ -1,118 +1,138 @@
-*
-{
+* {
     margin: 0;
+    padding: 0; /* Adicionando padding: 0 para evitar espaços indesejados */
 }
 
-
-html{
-    scroll-behavior: smooth;
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da viewport */
 }
 
-#contato{
-    .contato{
-        color: rgb(56, 197, 0);
-    }
-}
-
-#home{
-    .home{
-        color: rgb(56, 197, 0);
-    }
-}
-
-#jogar{
-    .btn{
-        color: rgb(56, 197, 0);
-        background-color: white;
-    }
-}
-
-#sobre{
-    .sobre{
-        color: rgb(56, 197, 0);
-    }
-}
-
-#galeria{
-    .galeria{
-        color: rgb(56, 197, 0);
-    }
-}
-
-body{
+body {
     background-color: rgb(56, 197, 0);
-    footer{
-        background-color: rgb(1, 71, 1);
-        color: white;
+    font-family: 'Open Sans', sans-serif; /* Definindo a fonte padrão */
+}
+
+header {
+    background-color: black;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s all;
+}
+
+nav a:hover {
+    color: rgb(56, 197, 0);
+}
+
+.btn {
+    background-color: rgb(56, 197, 0);
+    padding: 8px 17px;
+    border-radius: 7px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: red;
+}
+
+main {
+    flex: 1; /* Faz com que o main ocupe o espaço restante */
+}
+
+footer {
+    background-color: rgb(1, 71, 1);
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Adiciona padding ao footer */
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li {
+    margin-top: 14px;
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Estilos específicos para cada página */
+#contato .contato,
+#home .home,
+#sobre .sobre,
+#galeria .galeria,
+#jogar .btn {
+    color: rgb(56, 197, 0);
+}
+
+.img1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    img{
+        width: 30%;
+        padding-bottom: 50px;
         text-align: center;
-        padding: 3px 0;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font-family: Open Sans;
-        ul{
-            padding: 0%;
-            li{
-                margin-top: 30px;
-                list-style: none;
-                a{
-                    text-decoration: none;
-                    color: black;
-                    text-align: center;
-                    
-                }
-            }
-        }
-        p{
-            text-align: center;
-        }
     }
 }
 
-header
-{
-    background-color: black;
-    position: fixed;
-    width: 100%;
+/* Consultas de mídia para responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Ajusta a margem para itens em coluna */
+    }
+
+    nav a {
+        font-size: 16px; /* Ajusta o tamanho da fonte em telas menores */
+    }
+
+    .btn {
+        padding: 10px 15px; /* Ajusta o padding do botão */
+    }
 }
 
-nav
-{
-    text-align: right;
-    ul
-    {
-        list-style: none;
-        font-family: Open Sans;
-        text-transform: uppercase;
-        font-size: 18px;
+@media (max-width: 480px) {
+    nav ul {
+        font-size: 10px; /* Reduz o tamanho da fonte em telas muito pequenas */
+    }
 
-        li
-        {
-            display: inline-block;
-            margin: 15px;
-
-            a
-            {
-                text-decoration: none;
-                color: white;
-                transition: 0.5s all;
-            }
-            a:hover{
-                color: rgb(56, 197, 0);
-                transition: 0.4s all;
-            }
-            .btn
-            {
-                background-color: rgb(56, 197, 0);
-                padding: 8px 17px 8px 17px;
-                border-radius: 7px;
-            }
-            .btn:hover
-            {
-                background-color: white;
-                color: red;
-            }
-        }
+    footer {
+        font-size: 12px; /* Ajusta o tamanho da fonte do footer */
     }
 }
